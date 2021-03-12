@@ -1,0 +1,20 @@
+@import "../../node_modules/normalize.css/normalize.css";
+
+@import "utils/variables";
+
+@import "mixins/media";
+
+@import "utils/fonts";
+
+@import "common/global";
+
+@import "../pages/common/header/header";
+
+@import "../pages/common/section-1/building";
+
+@import "../pages/common/section-2/how-we-work";
+
+@import "../pages/common/section-3/services";
+
+@import "../pages/common/footer/footer"
+

@@ -1,0 +1,10 @@
+.services{
+    padding: 50px 0;
+    .services__title{
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        @include Text-Style-HeadingTwo;
+       border-bottom: 1px solid $orange;
+    }
+}

@@ -1,0 +1,23 @@
+doctype html
+html(lang="ru")
+    block head
+        head
+            meta(charset="utf-8")
+            title Строительство
+            meta(content="width=device-width, initial-scale=1" name="viewport")
+            meta(content="ie=edge" http-equiv="x-ua-compatible")
+            link(rel="stylesheet" href="css/style.min.css")
+    body
+        block header
+            include header/header
+        block section 
+            include section-1/building
+        block section 
+            include section-2/how-we-work
+        block section 
+            include section-3/services
+            
+        block footer
+            include footer/footer
+        block scripts
+            script(src='js/main.min.js')

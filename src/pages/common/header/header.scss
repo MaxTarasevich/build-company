@@ -1,0 +1,29 @@
+.header{
+  .header__menu{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      @include Text-Style-Menu;
+      .header__menu-item{
+          margin-right: 70px;
+          a{
+              display: block;
+          }
+         
+      }
+      .header__menu-item:first-of-type{
+          margin-right: 46px;
+      }
+      .header__menu-item:last-of-type{
+          margin-left: auto;
+          margin-right: 0;
+          position: relative;
+          a:last-of-type{
+            position: absolute;
+            top:26px;
+            left: 26px;
+            color: $orange;
+          }
+      }
+  }
+}

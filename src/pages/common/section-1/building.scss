@@ -1,0 +1,39 @@
+.building{
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 96px;
+    .container{
+        display: flex;
+    }
+    .building__text-container{
+      max-width: 540px;
+      .building__title{
+        @include Text-Style-HeadingOne;
+        text-align: left;
+        margin: 70px 0;
+      }
+      .building__text{
+          max-width: 320px;
+          margin-bottom: 80px;
+          @include Text-Style-HeadingThree;
+          text-align: left;
+      }
+    }
+    .building__slider-container{
+        width: 660px;
+        height: 520px;
+        position: absolute;
+        top: 8px;
+        right: 0;
+        border:10px solid $orange;
+        border-right: none;
+        .building__slider-display{
+            display: block;
+            position: absolute;
+            width: 640px;
+            height: 440px;
+            top:40px;
+            right: 100px;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.howWeWork{
+    padding: 60px 0;
+    background-image: url(../img/howWeWork_bg.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    position: relative;
+    .howWeWork__title{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        @include Text-Style-HeadingTwo;
+        position: relative;
+        z-index: 2;
+       span{
+           width: 200px;
+           border-bottom: 1px solid $orange;
+       }
+    }
+    .howWeWork__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 100px;
+        @include Text-Style-Text;
+        list-style: none;
+        position: relative;
+        z-index: 2;
+        li{
+            width: 400px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 56px;
+            span{
+                display: inline-block;
+                margin-right: 25px;
+                @include Text-Style-HeadingOne;
+                color: $orange;
+            }
+        }
+        
+        li:last-of-type:nth-child(odd){
+          margin: 0 auto;
+        }
+    }
+}
+.howWeWork::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1;
+}
