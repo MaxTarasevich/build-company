@@ -41,6 +41,16 @@
                 object-fit: cover;
                 z-index: 1;
             }
+            svg{
+                position: absolute;
+                bottom: 8%;
+                left: 5%;
+                z-index: 3;
+                path{
+                    transition: 0.6s ease-in;
+                }
+              
+            }
         }
         .services__tabs-button:before{
             content: "";
@@ -59,12 +69,18 @@
                 color:$orange;
                 transform: scale(1.05);
             }
+            svg{
+                path{
+                    fill:$orange;
+                }
+            }
         }
         .services__tabs-button:hover:before{
             background-color:$black;
         }
     }
     .services__tabs-display{
+        position:relative;
         width: 600px;
         height: 750px;
         border:4px solid $orange;
@@ -73,7 +89,11 @@
         .services__tabs-item{
             width: 100%;
             height: 100%;
-            position: relative;
+            position: absolute;
+            top:0;
+            left: 0;
+            opacity: 0;
+            transition: 0.9s ease-out;
             img{
                 position: absolute;
                 display: block;
@@ -117,6 +137,9 @@
             opacity: 0.85;
             z-index: 2;
             transition: 0.6s ease-in;
+        }
+        .services__tabs-item.active{
+            opacity: 1;
         }
     }
     .services__text{
