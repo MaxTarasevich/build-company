@@ -1,3 +1,141 @@
 .dreams{
     padding: 1px 0;
+    .dreams__title{
+       text-align: center;
+       @include Text-Style-HeadingTwo;
+       color:$orange;
+       margin-bottom: 100px;
+    }
+    .dreams__content{
+        background-image: url(../img/dreams_bg.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: relative;
+        .container{
+        display: flex;
+        position: relative;
+        .dreams__content-form{
+            max-width: 400px;
+            margin: 55px 0 88px 100px;
+            padding: 26px 0px;
+            display: flex;
+            flex-wrap: wrap;
+           justify-content: center;
+            background-color:$darkGrey;
+            border:4px solid $orange;
+            border-radius: 15px;
+            z-index: 3;
+            legend{
+                @include Text-Style-HeadingThree;
+                margin-bottom: 18px;
+            }
+            input,textarea{
+                width: 80%;
+                padding: 5px;
+                border:none;
+                margin-bottom: 15px;
+                border-bottom: 1px solid $orange;
+                background-color:$darkGrey;
+                color:$white;
+                @include Text-Style-Paragraph;
+            }
+            textarea{
+                height: 145px;
+                margin-top: 16px;
+                resize: none;
+                border:1px solid $orange;
+                border-radius: 10px;
+            }
+            button{
+                width: 80%;
+                margin-bottom: 15px;
+                cursor: pointer;
+            }
+            label{
+                margin-left: 12.5%;
+                @include Text-Style-Paragraph;
+              margin-right: auto;
+                text-align: left;
+            }
+            .container {
+               width: 90%;
+                position: relative;
+                padding-left: 26px;
+                padding-top: 3px;
+                cursor: pointer;
+                user-select: none;
+                @include Text-Style-Paragraph;
+                font-size:.625rem ;
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                    padding: 0;
+                    margin: 0;
+                  }
+                  
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 16px;
+                width: 16px;
+                background-color:$darkGrey;
+                border: 1px solid $orange;
+                border-radius:2px;
+              }
+              input:checked ~ .checkmark {
+                background-color: $black;
+              }
+              .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+              }
+              input:checked ~ .checkmark:after {
+                display: block;
+              }
+              .checkmark:after {
+                left: 6px;
+                top: -9px;
+                width: 10px;
+                height: 20px;
+                border: solid $white;
+                border-width: 0 4px 4px 0;
+                transform: rotate(45deg);
+              } 
+              }
+              
+              .container:hover input ~ .checkmark {
+                background-color: $black;
+              }
+              
+        }
+    }
+    
 }
+.dreams__content-image{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 608px;
+height: 672px;
+margin-left: 44px;
+z-index: 3;
+}
+.dreams__content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+}
+ 
+  
+  

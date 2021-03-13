@@ -136,28 +136,25 @@
       </div>
     </section>
     <section class="dreams"> 
-      <div class="container"> 
-        <h2 class="dreams__title">Давайте воплотим Ваши мечты  в реальность!</h2>
-        <div class="dreams__content"> 
-          <form class="dreams__content-form"> 
-            <fieldset> 
-              <legend>ЗАПОЛНИТЕ ФОРМУ</legend>
-              <input type="text" name="" placeholder="Ваше имя">
-              <input type="tel" name="" placeholder="Номер телефона">
-              <label for="textarea">Опишите Вашу  заявку</label>
-              <textarea name="textarea" cols="30" rows="10"></textarea>
-              <button type="submit">Получить консультацию</button>
-              <input type="radio" name="radio">
-              <label for="radio">Принимаю условия Политики конфединциальности </label>
-            </fieldset>
+      <h2 class="dreams__title">Давайте воплотим Ваши мечты  в реальность!</h2>
+      <div class="dreams__content"> 
+        <div class="container"> 
+          <form class="dreams__content-form">
+            <legend>ЗАПОЛНИТЕ ФОРМУ</legend>
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="tel" name="tel" placeholder="Номер телефона" required>
+            <label for="textarea">Опишите Вашу  заявку</label>
+            <textarea name="textarea" cols="30" rows="10" required></textarea>
+            <button class="button" type="submit">Получить консультацию</button>
+            <label class="container">
+              <input id="checkbox" type="checkbox" name="checkbox" required>Принимаю условия Политики конфединциальности<span class="checkmark">      </span>
+            </label>
           </form>
           <div class="dreams__content-image"> <img src="img/dreamsImage.png" alt="воплотим мечты"></div>
         </div>
       </div>
     </section>
-    <footer>
-      <p>Footer</p>
-    </footer>
+    <footer> </footer>
     <script src="js/main.min.js"></script>
   </body>
 </html>

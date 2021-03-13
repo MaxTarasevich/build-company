@@ -1,16 +1,17 @@
 section.dreams 
-    .container 
         h2.dreams__title Давайте воплотим Ваши мечты  в реальность!
         .dreams__content 
-            form.dreams__content-form 
-                fieldset 
-                    legend ЗАПОЛНИТЕ ФОРМУ
-                    input(type="text", name="", placeholder="Ваше имя")
-                    input(type="tel", name="", placeholder="Номер телефона")
-                    label(for="textarea") Опишите Вашу  заявку
-                    textarea(name="textarea", cols="30", rows="10")
-                    button(type="submit") Получить консультацию
-                    input(type="radio", name="radio")
-                    label(for="radio") Принимаю условия Политики конфединциальности 
-            .dreams__content-image 
-                img(src="img/dreamsImage.png", alt="воплотим мечты") 
+            .container 
+                form.dreams__content-form
+                        legend ЗАПОЛНИТЕ ФОРМУ
+                        input(type="text", name="name", placeholder="Ваше имя", required)
+                        input(type="tel", name="tel", placeholder="Номер телефона", required)
+                        label(for="textarea") Опишите Вашу  заявку
+                        textarea(name="textarea", cols="30", rows="10", required)
+                        button.button(type="submit") Получить консультацию
+                        label.container
+                            input#checkbox(type="checkbox", name="checkbox", required)
+                            |Принимаю условия Политики конфединциальности
+                            span.checkmark       
+                .dreams__content-image 
+                    img(src="img/dreamsImage.png", alt="воплотим мечты") 

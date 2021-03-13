@@ -26,11 +26,18 @@ a {
     text-decoration: none;
     color: inherit;
 }
+h1,h2,h3,p{
+    margin: 0;
+    padding: 0;
+}
 header, section, footer{
     max-width: 1440px;
     margin: 0 auto;
     background-color:$black;
     color: $white;
+}
+img{
+    max-width: 100%;
 }
 .container{
 max-width: 1200px;
@@ -43,6 +50,7 @@ margin: 0 auto;
     border:3px solid $orange;
     border-radius: 10px;
     @include Text-Style-Menu;
+    color: $white;
     transition: 0.6s ease-in;
 }
 .button:hover{
