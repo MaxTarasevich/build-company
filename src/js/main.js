@@ -20,4 +20,9 @@ function tabChage (number){
     tabs[number].classList.add(`active`)
 }
 
+// Circle
+const circleItem = document.querySelectorAll(`.spinner__item`)
+
+
+
 }
