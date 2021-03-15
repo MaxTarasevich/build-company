@@ -1,0 +1,17 @@
+section.contact
+    h2.contact__title СВЯЖИТЕСЬ С НАМИ ИЛИ ОСТАВЬТЕ ЗАЯВКУ
+    .contact__content.dark__filter
+            .container    
+                .contact__content-image 
+                    img(src="img/contacts.png", alt="контакты")
+                form.contact__content-form.form
+                        legend ЗАПОЛНИТЕ ФОРМУ
+                        input(type="text", name="name", placeholder="Ваше имя", required)
+                        input(type="tel", name="tel", placeholder="Номер телефона", required)
+                        label(for="textarea") Опишите Вашу  заявку
+                        textarea(name="textarea", cols="30", rows="10", required)
+                        button.button(type="submit") Получить консультацию
+                        label.container
+                            input.checkbox(type="checkbox", name="checkbox", required)
+                            |Принимаю условия Политики конфединциальности
+                            span.checkmark    

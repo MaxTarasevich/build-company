@@ -17,19 +17,73 @@
                 flex-grow: 1;
                 border:6px solid $darkGrey;
                 border-left: none;
+                border-bottom:6px solid $orange;
                 @include Text-Style-Menu;
                 font-size: 1.25rem;
                 text-align: center;
                 transition: 0.6s ease-out;
             }
+            .price__tabs-button:first-of-type{
+                border-left: 6px solid $darkGrey;
+            }
             .price__tabs-button:hover{
                 background-color:$black;
                 opacity: 0.6;
             }
+            .price__tabs-button.clicked{
+                border:6px solid $orange;
+                border-bottom:none;
+            }
         }
         .price__tabs-table{
            width: 100%;
+           table-layout: fixed;
             border: 6px solid $orange;
+            border-top: none;
+           border-collapse: collapse;
+            thead{
+                th{
+                    width: 20%;
+                    padding:10px 0 15px 0;
+                    border:1px solid $white;
+                    text-align: center;
+                    @include Text-Style-HeadingOne;
+                    font-size: 1rem;
+                }
+                th:first-of-type{
+                    width: 60%;
+                    padding-left: 66px;
+                    text-align: left;
+                }
+                .emty{
+                    th{
+                        border: none;
+                    }
+                }
+            }
+            tbody{
+                @include Text-Style-Paragraph;
+                td{
+                    padding: 10px 0 5px 0px;
+                    border:1px solid $white;
+                    text-align: center;
+                }
+                td:first-of-type{
+                    padding-left: 46px;
+                    text-align: left;
+                }
+            } 
+            tfoot{
+                height: 32px;
+            }     
+        }
+    }
+    .price__download{
+        margin-top: 40px;
+        display: flex;
+        justify-content: flex-end;
+        .price__download-link{
+           margin-right: 100px;
         }
     }
 }
