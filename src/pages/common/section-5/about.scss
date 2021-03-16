@@ -1,5 +1,5 @@
 .about{
-    padding: 35px 0 88px 0;
+    padding: 2.4% 0 6% 0;
     background-image: url(../img/about_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,14 +12,30 @@
         align-items:center;
         position: relative;
         z-index: 2;
+        @include media-custom(550px){
+            justify-content: center;
+        }
         .about__list{
             width: 40%;
+            @include media-custom(800px){
+                width: 55%;
+            }
+            @include media-custom(550px){
+                width: 90%;
+            }
+
             .about__list-title{
                 text-align: center;
                 @include Text-Style-HeadingTwo;
                 font-size: 4.375rem;
                 color: $orange;
-                margin-bottom: 40px;
+                margin-bottom: 8.3%;
+                @include media-custom(800px){
+                    font-size: 2.5rem;
+                }
+                @include media-custom(550px){
+                    margin-bottom: 10px;
+                }
             }
             .about__list-container{
                 .about__list-item{
@@ -28,6 +44,9 @@
                     @include Text-Style-Menu;
                     font-size: 1.25rem;
                     border-bottom:3px solid $orange;
+                    @include media-custom(800px){
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -35,10 +54,18 @@
             width: 320px;
             height: 320px;
             margin-top: 30px;
-            margin-right: 170px;
+            margin-right: 14%;
             border: 3px solid $orange;
             border-radius: 50%;
             position: relative;
+            @include media-custom(1100px){
+                margin-right:5%;
+            }
+            @include media-custom(800px){
+                width: 200px;
+                height: 200px;
+                margin-right:0;
+            }
             .spinner__item{
                 position: absolute;
                 top: 0;
@@ -53,6 +80,9 @@
             @include Text-Style-Text;
             opacity: 0;
             transition: 0.8s ease-in;
+            @include media-custom(800px){
+                font-size: 1rem;
+              }
             }
             .spinner__item.visible{
                 opacity: 1;
@@ -61,15 +91,25 @@
                 margin-top: 20px;
                 width: 100%;
                align-self:flex-start;
+               @include media-custom(800px){
+                margin-top: 8px;
+              }
               
             }
             .spinner__text-center{
               @include  Text-Style-HeadingOne;
               font-size: 6.25rem;
               color: $orange;
+              @include media-custom(800px){
+                font-size: 3.25rem;
+              }
             }
             .spinner__text-bottom{
                 margin-bottom: 35px;
+                @include media-custom(800px){
+                    width: 80%;
+                    margin-bottom: 8px;
+                  }
             }
         }
     }
