@@ -42,6 +42,9 @@ img{
 .container{
 width: 83%;
 margin: 0 auto;
+@include media-custom(600px){
+    width: 95%;
+}
 }
 .button{
     display:inline-block;
