@@ -6,6 +6,9 @@
         justify-content: space-between;
         align-items: center;
         @include Text-Style-Menu;
+        @include media-custom(500px){
+            justify-content: center;
+        }
         .footer__info-contacts{
             li{
                 margin-bottom: 20px;
@@ -40,6 +43,10 @@
             }
         }
         .footer__info-company{
+            @include media-custom(500px){
+            width: 100%;
+            text-align: center;
+            }
            li{
             margin-bottom: 19px;
            }
