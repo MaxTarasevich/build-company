@@ -7,6 +7,8 @@ tabsInitial(`.price__tabs-button`, `.price__tabs-table`)
 
 clickTableButton ()
 
+}
+
 
 function tabsInitial (buttonsClass, itemClass) {
     const tabsButtons = document.querySelectorAll(buttonsClass)
@@ -42,4 +44,7 @@ function clickTableButton () {
     })
 
  }
-}
+
+ function slider () {
+    const items = document.querySelectorAll(`.building__slider-item`)
+ }
