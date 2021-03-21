@@ -3,16 +3,17 @@ window.onload = function () {
 
 slider ()
 
-
-
 tabsInitial(`.services__tabs-button`, `.services__tabs-item`)
 
 tabsInitial(`.price__tabs-button`, `.price__tabs-table`)
 
 clickTableButton ()
 
+circeSlider ()
+
 }
 
+// Tabs
 
 function tabsInitial (buttonsClass, itemClass) {
     const tabsButtons = document.querySelectorAll(buttonsClass)
@@ -48,6 +49,8 @@ function clickTableButton () {
     })
 
  }
+
+ // Slider
 
  function slider () {
     const items = document.querySelectorAll(`.building__slider-item`)
@@ -116,3 +119,26 @@ function clickTableButton () {
        
     }
  }
+
+ // Circle
+function circeSlider () {
+    const spinerItem = document.querySelectorAll(`.spinner__item`)
+    let position = 0
+    spinerItem[position].classList.add(`visible`)
+    setInterval(() =>{
+        if(position < spinerItem.length-1){
+            position +=1
+            spinerItem.forEach((item) =>{
+                item.classList.remove(`visible`)
+            })
+            spinerItem[position].classList.add(`visible`)
+        }else{
+            position = 0
+            spinerItem.forEach((item) =>{
+                item.classList.remove(`visible`)
+            })
+            spinerItem[position].classList.add(`visible`)
+        }
+       
+    },4000)
+}

@@ -1,3 +1,4 @@
+
 .about{
     padding: 2.4% 0 6% 0;
     background-image: url(../img/about_bg.jpg);
@@ -52,19 +53,35 @@
         }
         .about__spinner-container{
             width: 320px;
-            height: 320px;
+            height: 335px;
             margin-top: 30px;
             margin-right: 14%;
-            border: 3px solid $orange;
-            border-radius: 50%;
+            //border: 5px solid $orange;
+            border-radius: 100%;
             position: relative;
+          
             @include media-custom(1100px){
                 margin-right:5%;
             }
             @include media-custom(800px){
                 width: 200px;
-                height: 200px;
+                height: 210px;
                 margin-right:0;
+            }
+            .about__spinner-circle{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                .about__spinner-inner{
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                border: 5px solid transparentize($orange, 0.3);
+                border-right: none;
+                border-top: none;
+                background-clip: padding-box;
+                box-shadow: inset 0px 0px 10px transparentize($orange, 0.85);
+                }
             }
             .spinner__item{
                 position: absolute;
@@ -79,20 +96,22 @@
             text-align: center;
             @include Text-Style-Text;
             opacity: 0;
-            transition: 0.8s ease-in;
+            transform: scale(1.1);
+            transition: 0.6s ease-in;
             @include media-custom(800px){
                 font-size: 1rem;
               }
             }
             .spinner__item.visible{
+                transform: scale(1);
                 opacity: 1;
             }
             .spinner__text-top{
-                margin-top: 20px;
+                margin-top: 25px;
                 width: 100%;
                align-self:flex-start;
                @include media-custom(800px){
-                margin-top: 8px;
+                margin-top: 15px;
               }
               
             }
@@ -105,12 +124,31 @@
               }
             }
             .spinner__text-bottom{
-                margin-bottom: 35px;
+                margin-bottom: 40px;
                 @include media-custom(800px){
                     width: 80%;
-                    margin-bottom: 8px;
+                    margin-bottom: 10px;
                   }
             }
         }
+
+
     }
+}
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@for $i from 0 through 2  {
+  .about__spinner-circle:nth-of-type(#{$i}){
+    transform: rotate($i * 70deg);
+    .about__spinner-inner{
+      animation: spin 3s infinite linear
+  }  
+}
 }

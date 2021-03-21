@@ -1,3 +1,4 @@
+
 .building{
     position: relative;
     padding-top: 8px;
@@ -81,7 +82,8 @@
             height: 84%;
             top:8%;
             right: 18%;
-            object-fit: cover;
+            background-color:$black;
+            z-index: 2;
             cursor: pointer;
             @include media-custom(1060px){
                 top:5%;
@@ -102,9 +104,11 @@
                 height: 100%;
                 object-fit:cover;
                 opacity: 0;
+                transform:scale(1.5);
                 transition: 1s ease-in;
             }
             img.active{
+                transform:scale(1.0);
                 opacity: 1;
             }
             .building__slider-prev,.building__slider-next{
