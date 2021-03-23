@@ -8,7 +8,7 @@ module.exports = {
   src,
   buildPath: path.join(root, '/build'),
   pug2html: {
-    beautifyHtml: true
+    beautifyHtml: false
   },
  
   }
