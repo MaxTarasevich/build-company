@@ -168,3 +168,81 @@ margin: 0 auto;
       }
       
 }
+
+// Style for modal
+
+.modal{
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color:$black;
+    z-index: 6;
+    transition:0.8s ease-in;
+    .modal__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding:6% 0;
+
+        .modal__title{
+            position: relative;
+            width: 100%;
+            margin-bottom: 5%;
+            text-align: center;
+        @include Text-Style-HeadingTwo;
+        color: $white;
+        font-size: 2.5rem;
+        @include media-custom(650px){
+            font-size: 1.5rem;
+            margin-bottom: 9%;
+        }
+        @include media-custom(450px){
+            margin-bottom: 5%;
+        }
+        .close__button{
+            display: block;
+            background-image:url(../img/close_button_icon.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            border-radius:10px;
+            background-color:$orange;
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+            cursor: pointer;
+            @include media-custom(650px){
+                width: 40px;
+                height: 40px;
+            }
+        }
+        }
+        .modal__img{
+            width: 430px;
+            height: 430px;
+            border-radius: 15px;
+            margin-left: 2%;
+            margin-bottom: 5%;
+            cursor: pointer;
+            @include media-custom(650px){
+                width: 320px;
+                height: 320px;
+            }
+            @include media-custom(400px){
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+    }
+}
+.modal.animate{
+    top:0;
+   
+}

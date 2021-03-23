@@ -11,6 +11,7 @@ clickTableButton ()
 
 circeSlider ()
 
+galeryClick ()
 }
 
 // Tabs
@@ -141,4 +142,70 @@ function circeSlider () {
         }
        
     },4000)
+}
+
+// Galery
+
+
+function createElement(elemName, className) {
+    const elem = document.createElement(elemName)
+    elem.className = className
+    return elem
+    }
+
+function modalGallery(titleText, galeryItems) {
+    const modal =  createElement(`div`, `modal`)
+    const modalContainer = createElement(`div`, `modal__container`)
+    const title = createElement(`h2`, `modal__title`)
+    const closeButton = createElement(`span`, `close__button`)
+
+    document.body.append(modal)
+    modal.append(modalContainer)
+    modalContainer.append(title)
+    title.append(titleText)
+    title.append(closeButton)
+
+    for(let i = 0; i < galeryItems.length; i++){
+        let img =  createElement(`img`, `modal__img`)
+        let string = `img/${galeryItems[i]}.jpg`
+        let altString = `${titleText} примеры работ`
+
+        img.setAttribute("src",string)
+        img.setAttribute("alt",altString)
+        modalContainer.append(img)
+    }
+
+    
+
+    setTimeout(()=>{
+        modal.classList.add(`animate`)
+        document.body.style.overflow = `hidden`
+    },100)
+   
+
+
+    document.querySelector(`.close__button`).addEventListener(`click`,() => {
+
+        modal.classList.remove(`animate`)
+
+        setTimeout(()=>{
+            modal.remove()
+        },1000)
+      
+        document.body.style.overflow = `auto`
+
+    })
+}
+
+function galeryClick () {
+    const items = document.querySelectorAll(`.galery__item`)
+
+    items.forEach((item) => {
+        item.addEventListener(`click`,(e) => {
+            const titleText = e.currentTarget.firstChild.getAttribute(`alt`)
+            const galeryItems = e.currentTarget.firstChild.getAttribute(`data-galery`).split(',')
+
+            modalGallery(titleText,galeryItems)
+        })
+    })
 }
