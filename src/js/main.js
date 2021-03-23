@@ -1,5 +1,7 @@
 
 window.onload = function () {
+   
+scrollToLink(`.link`)
 
 slider ()
 
@@ -175,8 +177,6 @@ function modalGallery(titleText, galeryItems) {
         modalContainer.append(img)
     }
 
-    
-
     setTimeout(()=>{
         modal.classList.add(`animate`)
         document.body.style.overflow = `hidden`
@@ -208,4 +208,22 @@ function galeryClick () {
             modalGallery(titleText,galeryItems)
         })
     })
+}
+
+function scrollToLink(linksClass) {
+    const links = document.querySelectorAll(linksClass)
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener(`click`, (e) => {
+            e.preventDefault()
+            const href = e.target.getAttribute(`href`).substring(1)
+            const scrollTarget = document.getElementById(href)
+            const elementPosition = scrollTarget.getBoundingClientRect().top
+
+            window.scrollBy({
+                top: elementPosition,
+                behavior: `smooth`
+            })
+
+        })
+    }
 }

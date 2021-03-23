@@ -4,7 +4,7 @@
        text-align: center;
        @include Text-Style-HeadingTwo;
        color:$orange;
-       margin-bottom: 9%;
+       margin-bottom: 6%;
        @include media-custom(700px){
            padding: 8px;
         font-size: 1.5rem;
