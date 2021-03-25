@@ -56,7 +56,6 @@
             height: 335px;
             margin-top: 30px;
             margin-right: 14%;
-            //border: 5px solid $orange;
             border-radius: 100%;
             position: relative;
           
@@ -80,7 +79,7 @@
                 border-right: none;
                 border-top: none;
                 background-clip: padding-box;
-                box-shadow: inset 0px 0px 40px transparentize($orange, 0.85);
+                box-shadow: inset 0px 0px 10px transparentize($orange, 0.85);
                 }
             }
             .spinner__item{

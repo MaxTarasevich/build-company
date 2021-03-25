@@ -80,7 +80,7 @@ margin: 0 auto;
     border-radius: 15px;
     z-index: 3;
     
-    legend{
+    p{
         @include Text-Style-HeadingThree;
         margin-bottom: 18px;
     }
