@@ -14,6 +14,7 @@ clickTableButton ()
 circeSlider ()
 
 galeryClick ()
+
 }
 
 // Tabs

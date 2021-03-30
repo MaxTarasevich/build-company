@@ -71,6 +71,7 @@
                 width: 100%;
                 height: 100%;
                 position: absolute;
+                overflow: hidden;
                 .about__spinner-inner{
                 width: 100%;
                 height: 100%;
@@ -141,7 +142,7 @@
     transform: rotate(360deg);
   }
 }
-@for $i from 0 through 2  {
+@for $i from 0 through 4  {
   .about__spinner-circle:nth-of-type(#{$i}){
     transform: rotate($i * 70deg);
     .about__spinner-inner{
@@ -149,4 +150,3 @@
   }  
 }
 }
-
