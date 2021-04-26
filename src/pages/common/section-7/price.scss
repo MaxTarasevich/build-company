@@ -92,6 +92,7 @@
                         text-align: center;
                         margin-bottom: 20px;
                         float: left;
+                        background-color:rgba($color: $darkGrey, $alpha: 0.4);
                     }
                 }
                 th:first-of-type{
@@ -114,12 +115,13 @@
             tbody{
                 @include Text-Style-Paragraph;
                 td{
-                    padding: 10px 0 5px 0px;
+                    padding: 5px 0 5px 0px;
                     border:1px solid $white;
                     text-align: center;
                     @include media-custom(500px){
                         border:1px solid $orange;
                       font-size: 1rem;
+                      background-color:rgba($color: $darkGrey, $alpha: 0.4);
                     }
                 }
                 td:first-of-type{
@@ -132,15 +134,10 @@
                     @include media-custom(500px){
                         text-align: center;
                         border-bottom:none;
-                        padding: 20px 0;
+                        padding: 8px 0;
                     }
                 }
                 
-            } 
-            tr{
-                @include media-custom(500px){
-                  
-                }
             }
             td{
                 @include media-custom(500px){
