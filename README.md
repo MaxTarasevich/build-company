@@ -11,3 +11,6 @@
 <br>
 Натяжка на Worpress + бесплатный хостинг:
 http://o299894z.beget.tech/
+<br>
+GitHub Pages:
+https://maxtarasevich.github.io/build-company/
